@@ -15,14 +15,14 @@ with open('requirements.txt') as f:
 requirements = required
 
 setup(
-    name='abstract_python_ip_geolocation',
-    version='1.0.0',
-    author='Benjamin Bouchet',
-    author_email='libraries@abstractapi.com',
-    description="AbstractIpGeolocation - Wrapper to quickly start using the powerful AbstractAPI's IP geolocation service in your projects.",
+    name='abstract_python_company_enrichment',
+    version='0.0.1',
+    author='Kathryn Schmitt',
+    author_email='kass@inreachventure.com',
+    description="AbstractCompanyEnrichment - Wrapper to quickly start using AbstractAPI's company enrichment service in your projects.",
     long_description=readme,
     long_description_content_type='text/markdown',
-    url='https://github.com/abstractapi/python-ip-geolocation',
+    url='https://github.com/kassschmitt/python-company-enrichment',
     packages=find_packages(),
     install_requires=requirements,
     classifiers=[

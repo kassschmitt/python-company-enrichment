@@ -1,11 +1,11 @@
 from python_core import HttpEndpoint
 from collections import namedtuple
 
-class AbstractIpGeolocation:
+class AbstractCompanyEnrichment:
 
     api_key = None
     http_endpoint = HttpEndpoint(
-        endpoint_subdomain='ipgeolocation',
+        endpoint_subdomain='companyenrichment',
         global_req_params={
             'lang' : 'python'
         }
@@ -14,13 +14,13 @@ class AbstractIpGeolocation:
 
     @staticmethod
     def configure(api_key):
-        AbstractIpGeolocation.api_key = api_key
+        AbstractCompanyEnrichment.api_key = api_key
 
 
     @staticmethod
-    def look_up(ip):
+    def look_up(domain):
 
-        if AbstractIpGeolocation.api_key is None:
+        if AbstractCompanyEnrichment.api_key is None:
             exception_type = "APINotConfiguredException"
             exception_msg = "Can't use the endpoint unless it's configured, use configure(api_key)"
             raise Exception(
@@ -29,10 +29,10 @@ class AbstractIpGeolocation:
 
         try:
             req_params = {
-                "api_key" : AbstractIpGeolocation.api_key,
-                "ip_address" : ip
+                "api_key" : AbstractCompanyEnrichment.api_key,
+                "domain" : domain
             }
-            response = AbstractIpGeolocation.http_endpoint.get(
+            response = AbstractCompanyEnrichment.http_endpoint.get(
                 req_params=req_params
             )
             # Convert the dict to an object
