@@ -16,7 +16,7 @@ requirements = required
 
 setup(
     name='abstract_python_company_enrichment',
-    version='0.0.1',
+    version='0.0.3',
     author='Kathryn Schmitt',
     author_email='kass@inreachventure.com',
     description="AbstractCompanyEnrichment - Wrapper to quickly start using AbstractAPI's company enrichment service in your projects.",
